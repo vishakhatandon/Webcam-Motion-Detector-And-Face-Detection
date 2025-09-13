@@ -12,7 +12,7 @@ while True:
     status=0
     check,frame=video.read()
     gray=cv2.cvtColor(frame,cv2.COLOR_BGR2GRAY)
-    gray=cv2.GaussianBlur(gray,(22,41),0)
+    gray=cv2.GaussianBlur(gray,(22,71),0)
 
     if first_frame is None:
         first_frame=gray
@@ -65,3 +65,4 @@ df.to_csv("Times.csv")
 video.release()
 
 cv2.destroyAllWindows()
+
