@@ -7,7 +7,7 @@ df["Start_str"]=df["Start"].dt.strftime("%Y-%m-%d %H:%M:%S")
 df["End_str"]=df["End"].dt.strftime("%Y-%m-%d %H:%M:%S")
 
 cds=ColumnDataSource(df)
-f=figure(width=1000,height=400,x_axis_type='datetime',title="Motion Graph")
+f=figure(width=1000,height=600,x_axis_type='datetime',title="Motion Graph")
 
 hovertool=HoverTool(tooltips=[("Start","@Start_str"),("End","@End_str")])
 f.add_tools(hovertool)
@@ -18,3 +18,4 @@ f.yaxis.minor_tick_line_color=None
 output_file("Graph.html")
 
 show(f)
+
